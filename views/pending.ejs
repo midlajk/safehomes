@@ -1,126 +1,100 @@
 <%- include('./include/head.ejs') -%>
 
-    <!-- Static Table Start -->
-    <div class="data-table-area mg-b-15" style="margin-top:20px">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="sparkline13-list">
-                        <div class="sparkline13-hd">
-                            <div class="main-sparkline13-hd">
-                                <h1>Projects <span class="table-project-n">Data</span> Table</h1>
-                            </div>
-                        </div>
-                        <div class="sparkline13-graph">
-                            <div class="datatable-dashv1-list custom-datatable-overright">
-
-                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                                    data-cookie-id-table="saveId" data-click-to-select="true">
-                                    <thead>
-                                        <tr>
-                                            <th data-field="email" data-editable="true">Vehicle number</th>
-
-                                            <th data-field="id">Owner name</th>
-                                            <th data-field="phone" data-editable="true">Phone</th>
-                                            <th data-field="task" data-editable="true">Service</th>
-                                            <th data-field="price" data-editable="true">Expiry date</th>
-                                            <th data-field="model">Pending Reason</th>
-                                            <th data-field="action">Action</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Kl13B023</td>
-                                            <td>Sankar</td>
-                                            <td>8978675664</td>
-                                            <td>Insurance</td>
-                                            <td>!8/02/2022</td>
-                                            <td>Didnt attend call</td>
-                                            <td></td>
+    <main class="h-full pb-16 overflow-y-auto">
+        <div class="container grid px-6 mx-auto">
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+            </h2>
+            <!-- CTA -->
 
 
+            <!-- With avatar -->
 
-                                        </tr>
+            <!-- With actions -->
+            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                Pending Enquiries
+            </h4>
+            <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                <table id="clientstable" class="table">
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Vehicle Number</th>
+                            <th>Mobile Number</th>
+                            <th>Service name</th>
+                            <th>Expiry Date</th>
+                            <th>Pending Reason</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let doc of docs){ %>
+                            <tr>
+                                <td>
+                                    <%=doc.name%>
+                                </td>
+                                <td>
+                                    <%=doc.vehiclenumber%>
+                                </td>
+                                <td>
+                                    <%=doc.mobile%>
+                                </td>
 
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                <td>
+                                    <%=doc.details.servicename%>
+
+                                </td>
+
+                                <td>
+                                    <%=doc.details.experydate.toLocaleDateString()%>
+                                </td>
+                                <td>
+                                    <%=doc.details.message%>
+
+                                </td>
+                                <td>
+                                    <div class="flex items-center space-x-4 text-sm">
+
+                                        <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray" aria-label="Edit">
+                                    <svg
+                                      class="w-5 h-5"
+                                      aria-hidden="true"
+                                      fill="currentColor"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                                      ></path>
+                                    </svg>
+                                  </button>
+                                        <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray" aria-label="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z" fill="currentColor"/></svg></button></div>
+                                </td>
+                            </tr>
+                            <% } %>
+
+                    </tbody>
+
+                </table>
+
             </div>
         </div>
+    </main>
     </div>
-    <!-- Static Table End -->
-
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/bs4/dt-1.13.4/af-2.5.3/b-2.3.6/date-1.4.0/r-2.4.1/sc-2.1.1/sb-1.4.2/sl-1.6.2/datatables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#clientstable').DataTable({
+                ordering: false,
 
-    <!-- jquery
-		============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="js/metisMenu/metisMenu.min.js"></script>
-    <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- data table JS
-		============================================ -->
-    <script src="js/data-table/bootstrap-table.js"></script>
-    <script src="js/data-table/data-table-active.js"></script>
-    <script src="js/data-table/bootstrap-table-editable.js"></script>
-    <script src="js/data-table/bootstrap-editable.js"></script>
-    <script src="js/data-table/bootstrap-table-resizable.js"></script>
-    <script src="js/data-table/colResizable-1.5.source.js"></script>
-    <script src="js/data-table/bootstrap-table-export.js"></script>
-    <!--  editable JS
-		============================================ -->
-    <script src="js/editable/jquery.mockjax.js"></script>
-    <script src="js/editable/mock-active.js"></script>
-    <script src="js/editable/select2.js"></script>
-    <script src="js/editable/moment.min.js"></script>
-    <script src="js/editable/bootstrap-datetimepicker.js"></script>
-    <script src="js/editable/bootstrap-editable.js"></script>
-    <script src="js/editable/xediable-active.js"></script>
-    <!-- Chart JS
-		============================================ -->
-    <script src="js/chart/jquery.peity.min.js"></script>
-    <script src="js/peity/peity-active.js"></script>
-    <!-- tab JS
-		============================================ -->
-    <script src="js/tab.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="js/main.js"></script>
-    <!-- tawk chat JS
-		============================================ -->
+            });
+        });
+
+        function deleteraw(x) {
+            document.getElementById("clientstable").deleteRow(x.rowIndex);
+
+        }
+    </script>
     </body>
 
     </html>

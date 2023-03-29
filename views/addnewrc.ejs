@@ -1,225 +1,278 @@
 <%- include('./include/head.ejs') -%>
 
+    <main class="h-full pb-16 overflow-y-auto">
+        <div class="container grid px-6 mx-auto">
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+            </h2>
+            <!-- CTA -->
 
-    <!-- Single pro tab review Start-->
-    <div class="single-pro-review-area mt-t-30 mg-b-15" style="margin-top:20px">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="product-payment-inner-st">
-                        <ul id="myTabedu1" class="tab-review-design">
-                            <li class="active"><a href="#description">Rc Information</a></li>
-                            <li><a href="#reviews"> Important dates</a></li>
-                        </ul>
-                        <div id="myTabContent" class="tab-content custom-product-edit">
-                            <div class="product-tab-list tab-pane fade active in" id="description">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="review-content-section">
-                                            <div id="dropzone1" class="pro-ad">
-                                                <form action="/upload">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                            <label for="">Owner's name</label>
-                                                            <div class="form-group">
-                                                                <input name="firstname" type="text" class="form-control" placeholder="Full Name" required>
-                                                            </div>
-                                                            <label for="">Owner's Address</label>
 
-                                                            <div class="form-group">
-                                                                <input name="address" type="text" class="form-control" placeholder="Address">
-                                                            </div>
-                                                            <label for="">Owner's Mobile number</label>
+            <!-- With avatar -->
 
-                                                            <div class="form-group">
-                                                                <input name="mobileno" type="number" class="form-control" placeholder="Mobile no." required>
-                                                            </div>
-                                                            <label for="">Rc number</label>
-                                                            <div class="form-group">
-                                                                <input name="department" type="text" class="form-control" placeholder="Rc Number">
-                                                            </div>
+            <!-- With actions -->
+            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                Register new RC
+            </h4>
+            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                Rc Details
+            </h4>
 
-                                                            <!-- <div class="form-group">
-                                                                <input name="postcode" id="postcode" type="text" class="form-control" placeholder="Postcode">
-                                                            </div> -->
+            <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-lg-4 col-12">
 
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                            <label for="">Rc Expiriy</label>
+                        <label class="block text-sm">
+                  <span class="text-gray-700 dark:text-gray-400">Name</span>
+                  <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    placeholder="eg : Jane Doe" name="name"
+                  />
+                </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-4 col-12">
 
-                                                            <div class="form-group">
-                                                                <input name="rcexpiry" type="date" class="form-control" placeholder="Validity">
-                                                            </div>
-                                                            <label for="">Vehicle number</label>
-
-                                                            <div class="form-group">
-                                                                <input name="department" type="text" class="form-control" placeholder="Vehicle Number" required>
-                                                            </div>
-                                                            <label for="">Vehicle Type</label>
-
-                                                            <div class="form-group">
-                                                                <select name="gender" class="form-control">
-																		<option value="none" selected="" disabled="">Vehicle Type</option>
-																		<option value="0">Public transport</option>
-																		<option value="1">Private transport</option>
-																	</select>
-                                                            </div>
-                                                            <label for="">Vehicle name & model</label>
-                                                            <div class="form-group">
-                                                                <input name="department" type="text" class="form-control" placeholder="Vehicle name">
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="payment-adress">
-                                                                <button type="submit" class="btn btn-primary waves-effect waves-light floatright" style="height: 50px;width:150px;">Submit</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="mt-1 text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">
+                    Registration Type
+                  </span>
+                            <div class="mt-2">
+                                <label class="inline-flex items-center text-gray-600 dark:text-gray-400">
+                      <input
+                        type="radio"
+                        class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                        name="registraionType"
+                        value="personal"
+                      />
+                      <span class="ml-2">Personal</span>
+                    </label>
+                                <label class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400">
+                      <input
+                        type="radio"
+                        class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                        name="registraionType"
+                        value="Public"
+                      />
+                      <span class="ml-2">Public</span>
+                    </label>
                             </div>
-                            <div class="product-tab-list tab-pane fade" id="reviews">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="review-content-section">
-                                            <div class="row">
-                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <form id="acount-infor" action="#" class="acount-infor">
-                                                        <div class="row">
-                                                            <div class="formelements">
-                                                                <div class="row">
-                                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                        <label for="">Service Name</label>
-
-                                                                        <div class="form-group">
-                                                                            <input name="rcexpiry" type="text" class="form-control" placeholder="eg: Insurance">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                        <label for="">Service Expiriy</label>
-
-                                                                        <div class="form-group">
-                                                                            <input name="rcexpiry" type="date" class="form-control" placeholder="Validity">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                        <label for="">Notice</label>
-
-                                                                        <div class="form-group">
-                                                                            <input name="rcexpiry" type="text" class="form-control" placeholder="Notice">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-
-                                                                        <br>
-
-                                                                        <button type="submit" class="btn btn-success waves-effect waves-light" style="height: 40px;width:150px;background-color:rgb(209, 24, 17);">Delete service</button>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="col-lg-12">
-                                                                <div class="payment-adress">
-                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light floatright" style="height: 50px;width:150px;margin-left: 20px;">Submit</button>
-                                                                </div>
-                                                                <div class="payment-adress">
-                                                                    <button type="submit" class="btn btn-success waves-effect waves-light floatright" style="height: 50px;width:150px;background-color:darkcyan;">Add new service</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-4 col-12">
+
+                        <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Registration Number</span>
+                        <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                          name="registrationnumber"
+                          placeholder="eg : KL 13 A 123"
+                        />
+                      </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-4 col-12">
+
+                        <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Address</span>
+                        <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                          name="address"
+                          placeholder="eg : kozhikode"
+                        />
+                      </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-4 col-12">
+
+                        <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Mobile number</span>
+                        <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                          name="mobilenumber"
+
+                          placeholder="eg : 9746364833"
+                        />
+                      </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-4 col-12">
+
+                        <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">RC Expiry</span>
+                        <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                          name="rcexpiry"
+                          type="date"
+                        />
+                      </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-4 col-12">
+
+                        <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Vehicle</span>
+                        <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                          name="vehicle"
+                        />
+                      </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-4 col-12">
+
+                        <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Model</span>
+                        <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                          name="model"
+                          placeholder="eg : i20"
+                        />
+                      </label>
                     </div>
                 </div>
             </div>
+            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                Service Details
+            </h4>
+
+            <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-lg-3 col-12">
+                        <label class="block text-sm">
+                  <span class="text-gray-700 dark:text-gray-400">Service Name</span>
+                  <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    placeholder="Service Name"
+                    id="servicename"
+                  />
+                </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-3 col-12">
+                        <label class="block text-sm">
+                  <span class="text-gray-700 dark:text-gray-400">Expiration Date</span>
+                  <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    type="date"
+                    id="serviceexpiry"
+                  />
+                </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-3 col-12">
+                        <label class="block text-sm">
+                  <span class="text-gray-700 dark:text-gray-400">Initial message</span>
+                  <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    placeholder="Jane Doe"
+                    id="servicenote"
+                    value="Initial message null"
+                  />
+                </label>
+
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-3 col-12">
+
+                        <Button style="width: 100%;height: 40px;background-color: rgb(64, 180, 64);margin-top: 22px;border-radius: 10px;color: #fff;" onclick="handleservice()">Add Service</Button>
+
+
+                    </div>
+                </div>
+
+                <table class="w-full whitespace-no-wrap mt-8" id="servicetable">
+                    <thead>
+                        <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                            <th class="px-4 py-3">Service name</th>
+                            <th class="px-4 py-3">Initial message</th>
+                            <th class="px-4 py-3">Status</th>
+                            <th class="px-4 py-3">Expiry Date</th>
+                            <th class="px-4 py-3">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800" id="tableBody">
+
+                    </tbody>
+                </table>
+
+                <div class="px-6 my-6">
+                    <Button class="items-center align-center w-64 px-5 py-3 text-sm font-medium leading-5 text-white bg-purple-600 border border-transparent rounded-lg floatright" style="float: right;text-align: center;" onclick="submitforms()">
+                        Register new Rc
+                    </Button>
+                </div>
+            </div>
         </div>
+    </main>
     </div>
-
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        var services = []
 
-    <!-- jquery
-		============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="js/metisMenu/metisMenu.min.js"></script>
-    <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
-    <!-- calendar JS
-		============================================ -->
-    <script src="js/calendar/moment.min.js"></script>
-    <script src="js/calendar/fullcalendar.min.js"></script>
-    <script src="js/calendar/fullcalendar-active.js"></script>
-    <!-- maskedinput JS
-		============================================ -->
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/masking-active.js"></script>
-    <!-- datepicker JS
-		============================================ -->
-    <script src="js/datepicker/jquery-ui.min.js"></script>
-    <script src="js/datepicker/datepicker-active.js"></script>
-    <!-- form validate JS
-		============================================ -->
-    <script src="js/form-validation/jquery.form.min.js"></script>
-    <script src="js/form-validation/jquery.validate.min.js"></script>
-    <script src="js/form-validation/form-active.js"></script>
-    <!-- dropzone JS
-		============================================ -->
-    <script src="js/dropzone/dropzone.js"></script>
-    <!-- tab JS
-		============================================ -->
-    <script src="js/tab.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="js/main.js"></script>
-    <!-- tawk chat JS
-		============================================ -->
+        function handleservice() {
+
+            servicename = document.getElementById('servicename').value;
+            serviceexpiry = document.getElementById('serviceexpiry').value;
+            servicenote = document.getElementById('servicenote').value;
+            if (servicename && serviceexpiry) {
+                services.push({
+                    servicename: servicename,
+                    experydate: serviceexpiry,
+                    message: servicenote,
+                    status: 'Active'
+                })
+                let table = document.getElementById("tableBody");
+
+                // Create row element
+                let row = document.createElement("tr")
+
+                // Create cells
+                row.innerHTML = ' <td class="px-4 py-3"><div class="flex items-center text-sm"><p class="font-semibold">' + servicename + '</p></div></td><td class="px-4 py-3 text-sm">' + servicenote + '</td><td class="px-4 py-3 text-xs"><span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">Approved</span></td><td class="px-4 py-3 text-sm">' + serviceexpiry + '</td><td class="px-4 py-3"><div class="flex items-center space-x-4 text-sm"><button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray" aria-label="Delete" onclick="deleteraw(this.parentNode.parentNode.parentNode)"><svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"clip-rule="evenodd"></path></svg></button></div></td>'
+
+                // Insert data to cells
+
+
+                // Append row to table body
+                table.appendChild(row)
+            } else {
+                alert('Must enter service name and expiry date')
+            }
+
+        }
+
+        function deleteraw(x) {
+            services.splice(x.rowIndex - 1, 1);
+            document.getElementById("servicetable").deleteRow(x.rowIndex);
+            console.log(services)
+
+        }
+
+        async function submitforms() {
+            names = document.getElementsByName('name')[0].value
+            console.log(names)
+            registraionType = document.getElementsByName('registraionType')[0].value
+            registrationnumber = document.getElementsByName('registrationnumber')[0].value
+            address = document.getElementsByName('address')[0].value
+            mobilenumber = document.getElementsByName('mobilenumber')[0].value
+            rcexpiry = document.getElementsByName('rcexpiry')[0].value
+            vehicle = document.getElementsByName('vehicle')[0].value
+            vehiclename = document.getElementsByName('model')[0].value
+            const data = {
+                name: names,
+                vehiclenumber: registrationnumber,
+                address: address,
+                mobile: mobilenumber,
+                rcexpiry: rcexpiry,
+                vehicle: vehicle,
+                registrationtype: registraionType,
+                vehiclename: vehiclename,
+                dateentered: new Date(),
+                services: services
+            }
+            try {
+                let result = await axios.post("http://127.0.0.1:3000/addnewrc", {
+                    data: data
+                })
+                console.log(result.response.data);
+            } catch (error) {
+                console.log(error.response); // NOTE - use "error.response.data` (not "error")
+            }
+
+
+        }
+    </script>
+
     </body>
 
     </html>

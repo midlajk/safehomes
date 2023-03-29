@@ -1,166 +1,785 @@
-<%- include('./include/head.ejs') -%>
+<%- include('./include/dashboardhead.ejs') -%>
 
-    <div class="analytics-sparkle-area" style="margin-top:20px">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="analytics-sparkle-line reso-mg-b-30">
-                        <div class="analytics-content">
-                            <h5>All vehicles</h5>
-                            <h2><span class="counter">5000</span> <span class="tuition-fees">nos</span></h2>
-
-                        </div>
+    <main class="h-full overflow-y-auto">
+        <div class="container px-6 mx-auto grid">
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                Dashboard
+            </h2>
+            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+                <!-- Card -->
+                <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                    <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
+                  </svg>
+                    </div>
+                    <div>
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Total clients
+                        </p>
+                        <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                            6389
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="analytics-sparkle-line reso-mg-b-30">
-                        <div class="analytics-content">
-                            <h5>Private vehicles</h5>
-                            <h2><span class="counter">5000</span> <span class="tuition-fees">nos</span></h2>
-
-                        </div>
+                <!-- Card -->
+                <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                    <div class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                    </div>
+                    <div>
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Private transorts
+                        </p>
+                        <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                            $ 46,760.89
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="analytics-sparkle-line reso-mg-b-30">
-                        <div class="analytics-content">
-                            <h5>Public Transports</h5>
-                            <h2><span class="counter">5000</span> <span class="tuition-fees">nos</span></h2>
-
-                        </div>
+                <!-- Card -->
+                <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                    <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                    ></path>
+                  </svg>
+                    </div>
+                    <div>
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Public transport
+                        </p>
+                        <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                            376
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="analytics-sparkle-line reso-mg-b-30">
-                        <div class="analytics-content">
-                            <h5>Pending Enquiries</h5>
-                            <h2><span class="counter">5000</span> <span class="tuition-fees">nos</span></h2>
-
-                        </div>
+                <!-- Card -->
+                <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                    <div class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
                     </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="product-sales-area mg-tb-30">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="sparkline13-list">
-                        <div class="sparkline13-hd">
-                            <div class="main-sparkline13-hd">
-                                <h1>Todo <span class="table-project-n">List</span> </h1>
-                            </div>
-                        </div>
-                        <div class="sparkline13-graph">
-                            <div class="datatable-dashv1-list custom-datatable-overright">
-
-                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-pagination-switch="true">
-                                    <thead>
-                                        <tr>
-                                            <th data-field="id">Date</th>
-                                            <th data-field="name" data-editable="true">Notice</th>
-                                            <th data-field="email" data-editable="true">Updation</th>
-                                            <th data-field="phone" data-editable="true">Action</th>
-
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>08/02/2011</td>
-                                            <td>anything to do on this date</td>
-                                            <td>Status of the work</td>
-                                            <td></td>
-
-
-
-
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                    <div>
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Recent notification
+                        </p>
+                        <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                            35
+                        </p>
                     </div>
                 </div>
             </div>
+            <div class="content-wrapper">
+                <div class="row">
+                    <!-- Order Statistics -->
+
+                    <!--/ Expense Overview -->
+
+                    <!-- Transactions -->
+                    <div class="col-md-6 col-lg-4 order-0 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header d-flex align-items-center justify-content-between">
+                                <h5 class="card-title m-2 me-2">Vehicles </h5>
+                                <h5 class="card-title m-2 me-2 floatright">500 </h5>
+
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="p-0 m-0">
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/car.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+
+                                                <h6 class="mb-0">Car</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0"></h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/bycicle.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Bike</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+270.69</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/rickshaw.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+
+                                                <h6 class="mb-0">Auto</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+203.33</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/bus.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Bus</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+637.91</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/delivery-truck.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Truck</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">-838.71</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/excavator.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+
+                                                <h6 class="mb-0">Other</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">-92.45</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 order-1 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <ul class="nav nav-pills" role="tablist">
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link active">
+                        Expiries
+                      </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab">Pending</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab" onp>Renewals</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body p-3">
+                                <ul class="p-0 m-0">
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/car.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+
+                                                <h6 class="mb-0">Car</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0"></h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/bycicle.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Bike</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+270.69</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/rickshaw.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+
+                                                <h6 class="mb-0">Auto</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+203.33</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/bus.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Bus</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+637.91</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/delivery-truck.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Truck</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">-838.71</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/excavator.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+
+                                                <h6 class="mb-0">Other</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">-92.45</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 order-2 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header d-flex align-items-center justify-content-between">
+                                <h5 class="card-title m-2 me-2">Sample chart </h5>
+
+                            </div>
+                            <div class="card-body px-0">
+                                <div class="tab-content p-0">
+                                    <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
+                                        <div class="d-flex p-4 pt-3">
+                                            <div class="avatar flex-shrink-0 me-3">
+                                                <img src="../assets/img/icons/unicons/wallet.png" alt="User" />
+                                            </div>
+                                            <div>
+                                                <small class="text-muted d-block">Total vehicle</small>
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="mb-0 me-1">100</h6>
+                                                    <small class="text-success fw-semibold">
+                              <i class="bx bx-chevron-up"></i>
+                              100%
+                            </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="incomeChart"></div>
+                                        <div class="d-flex justify-content-center pt-4 gap-2">
+                                            <div class="flex-shrink-0">
+                                                <div id="expensesOfWeek"></div>
+                                            </div>
+                                            <div>
+                                                <p class="mb-n1 mt-1">Vehicles This Month</p>
+                                                <small class="text-muted">390 less than last week</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Transactions -->
+                </div>
+                <!-- Content -->
+
+
+                <div class="row">
+                    <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+                        <div class="card">
+                            <div class="row row-bordered g-0">
+                                <div class="col-md-8">
+                                    <h5 class="card-header m-0 me-2 pb-3">Sample Graph</h5>
+                                    <div id="totalRevenueChart" class="px-2"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="growthReportId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      2022
+                                    </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="growthChart"></div>
+                                    <div class="text-center fw-semibold pt-3 mb-2">62% Company Growth</div>
+
+                                    <div class="d-flex px-xxl-4 px-lg-2 p-4 gap-xxl-3 gap-lg-1 gap-3 justify-content-between">
+                                        <div class="d-flex">
+                                            <div class="me-2">
+                                                <span class="badge bg-label-primary p-2"><i class="bx bx-dollar text-primary"></i></span>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <small>2022</small>
+                                                <h6 class="mb-0">000</h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="me-2">
+                                                <span class="badge bg-label-info p-2"><i class="bx bx-wallet text-info"></i></span>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <small>2021</small>
+                                                <h6 class="mb-0">000</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Total Revenue -->
+                    <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
+                                            <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
+                                                <div class="card-title">
+                                                    <h5 class="text-nowrap mb-1">Public Transport </h5>
+                                                    <span class="badge bg-label-danger rounded-pill">Nearby Expiries</span>
+                                                </div>
+                                                <div class="mt-sm-auto">
+                                                    <h3 class="mb-0">$84,686k</h3>
+                                                </div>
+                                            </div>
+                                            <div id="profileReportChart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
+                                            <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
+                                                <div class="card-title">
+                                                    <h5 class="text-nowrap mb-1">Public Transport </h5>
+                                                    <span class="badge bg-label-info rounded-pill">Pending Enquiries</span>
+                                                </div>
+                                                <div class="mt-sm-auto">
+                                                    <h3 class="mb-0">$84,686k</h3>
+                                                </div>
+                                            </div>
+                                            <div id="profileReportChart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div>
+          <div class="row"> -->
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
+                                            <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
+                                                <div class="card-title">
+                                                    <h5 class="text-nowrap mb-1">Public Transport </h5>
+                                                    <span class="badge bg-label-warning rounded-pill">Rc Expiries</span>
+                                                </div>
+                                                <div class="mt-sm-auto">
+                                                    <h3 class="mb-0">$84,686k</h3>
+                                                </div>
+                                            </div>
+                                            <div id="profileReportChart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <!-- Order Statistics -->
+                    <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                                <div class="card-title mb-0">
+                                    <h5 class="m-0 me-2">Private Transport's</h5>
+                                    <small class="text-muted">Report</small>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="d-flex flex-column align-items-center gap-1">
+                                        <h2 class="mb-2">8,258</h2>
+                                        <span>Number Of Vehicle</span>
+                                    </div>
+                                    <div id="orderStatisticsChart"></div>
+                                </div>
+                                <ul class="p-0 m-0">
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <span class="avatar-initial rounded bg-label-primary"></span>
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Private Transport</h6>
+
+                                            </div>
+                                            <div class="user-progress">
+                                                <h6 class="mb-0">82.6</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <span class="avatar-initial rounded bg-label-success"></span>
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Nearby Expiries</h6>
+
+                                            </div>
+                                            <div class="user-progress">
+                                                <h6 class="mb-0">82.6</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <span class="avatar-initial rounded bg-label-info"></span>
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Pending Enquiries</h6>
+
+                                            </div>
+                                            <div class="user-progress">
+                                                <h6 class="mb-0">82.6</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <span class="avatar-initial rounded bg-label-secondary"></span>
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Rc Renewals</h6>
+                                            </div>
+                                            <div class="user-progress">
+                                                <h6 class="mb-0">82.6</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Order Statistics -->
+
+                    <!-- Expense Overview -->
+                    <div class="col-md-6 col-lg-4 order-2 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <ul class="nav nav-pills" role="tablist">
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-tabs-line-card-income" aria-controls="navs-tabs-line-card-income" aria-selected="true">
+                        Income
+                      </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab">Expenses</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab">Profit</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="p-0 m-0">
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/stamp.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Fitness Certificate</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+82.6</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/identity.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">RC Renewal</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+270.69</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/air-pollution.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Pollution Renewal</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+637.91</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/insurance.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Insurance Renewal</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">-838.71</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/money-bag.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Tax Payment</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+203.33</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/customer-service.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Other Service</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">-92.45</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Expense Overview -->
+
+                    <!-- Transactions -->
+                    <div class="col-md-6 col-lg-4 order-1 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header d-flex align-items-center justify-content-between">
+                                <h5 class="card-title m-2 me-2 ">Services</h5>
+
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="p-0 m-0">
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/stamp.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Fitness Certificate</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+82.6</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/identity.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">RC Renewal</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+270.69</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/air-pollution.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Pollution Renewal</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+637.91</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/insurance.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Insurance Renewal</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">-838.71</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-1">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/money-bag.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Tax Payment</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">+203.33</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="avatar flex-shrink-0 me-3">
+                                            <img src="../assets/img/icons/unicons/customer-service.png" alt="User" class="rounded" />
+                                        </div>
+                                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="me-2">
+                                                <h6 class="mb-0">Other Service</h6>
+                                            </div>
+                                            <div class="user-progress d-flex align-items-center gap-1">
+                                                <h6 class="mb-0">-92.45</h6>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Transactions -->
+                </div>
+            </div>
+
+            <!-- / Content -->
+
+            <!-- Footer -->
+
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
         </div>
+        <!-- Charts -->
+
+        </div>
+    </main>
     </div>
-
-
     </div>
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <!-- jquery
-		============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- counterup JS
-		============================================ -->
-    <script src="js/counterup/jquery.counterup.min.js"></script>
-    <script src="js/counterup/waypoints.min.js"></script>
-    <script src="js/counterup/counterup-active.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="js/metisMenu/metisMenu.min.js"></script>
-    <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="js/morrisjs/raphael-min.js"></script>
-    <script src="js/morrisjs/morris.js"></script>
-    <script src="js/morrisjs/morris-active.js"></script>
-    <script src="js/data-table/bootstrap-table.js"></script>
-    <script src="js/data-table/data-table-active.js"></script>
-    <script src="js/data-table/bootstrap-table-editable.js"></script>
-    <script src="js/data-table/bootstrap-editable.js"></script>
-    <script src="js/data-table/bootstrap-table-resizable.js"></script>
-    <script src="js/data-table/colResizable-1.5.source.js"></script>
-    <script src="js/data-table/bootstrap-table-export.js"></script>
-    <!-- morrisjs JS
-        ===
-        === === === === === === === === === === === === === == -->
-    <script src="js/sparkline/jquery.sparkline.min.js">
-    </script>
-    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
-    <script src="js/sparkline/sparkline-active.js"></script>
-    <!-- calendar JS
-		============================================ -->
-    <script src="js/calendar/moment.min.js"></script>
-    <script src="js/calendar/fullcalendar.min.js"></script>
-    <script src="js/calendar/fullcalendar-active.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="js/main.js"></script>
-    <!-- tawk chat JS
-		============================================ -->
+    <script src="../assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="../assets/js/dashboards-analytics.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     </body>
 
     </html>
