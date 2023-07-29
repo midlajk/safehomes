@@ -1,0 +1,567 @@
+
+<script>
+    (function () {
+      function maybePrefixUrlField() {
+        const value = this.value.trim();
+        if (value !== '' && value.indexOf('http') !== 0) {
+          this.value = 'http://' + value;
+        }
+      }
+
+      const urlFields = document.querySelectorAll(
+        '.mc4wp-form input[type="url"]',
+      );
+      for (let j = 0; j < urlFields.length; j++) {
+        urlFields[j].addEventListener('blur', maybePrefixUrlField);
+      }
+    })();
+  </script>
+  <link
+    rel="stylesheet"
+    id="e-animations-css"
+    href="../frontend/wp-content/plugins/elementor/assets/lib/animations/animations.mina44d.css?ver=3.13.4"
+    type="text/css"
+    media="all"
+  />
+  <script
+    type="text/javascript"
+    src="../frontend/wp-includes/js/jquery/jquery.form.minb2f9.js?ver=4.3.0"
+    id="jquery-form-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/easy-real-estate/js/jquery.validate.min1c12.js?ver=2.0.4"
+    id="jquery-validate-js"
+  ></script>
+  <script type="text/javascript" id="ere-frontend-js-extra">
+    /* <![CDATA[ */
+    var ere_social_login_data = {
+      ajax_url: 'https:\/\/modern.realhomes.io\/wp-admin\/admin-ajax.php',
+    };
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/easy-real-estate/js/ere-frontend1c12.js?ver=2.0.4"
+    id="ere-frontend-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/easy-real-estate/includes/property-analytics/js/chart.min1c12.js?ver=2.0.4"
+    id="chart.js-js"
+  ></script>
+  <script type="text/javascript" id="ere-property-analytics-js-extra">
+    /* <![CDATA[ */
+    var property_analytics = {
+      ajax_url: 'https:\/\/modern.realhomes.io\/wp-admin\/admin-ajax.php',
+      ajax_nonce: 'd32fa09457',
+      property_id: '7072',
+      border_color: '#1ea69a',
+      background_color: '',
+      data_label: 'Property Views',
+      chart_type: 'line',
+    };
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/easy-real-estate/includes/property-analytics/js/property-analytics1c12.js?ver=2.0.4"
+    id="ere-property-analytics-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/assets/modern/scripts/vendors/progressbar/dist/progressbar.minf269.js?ver=1.0.1"
+    id="progress-bar-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="http://maps.google.com/maps/api/js?key=AIzaSyDjBC3OnsxljXPwNZEaZSnnclEI63ALj1Q&amp;language=en_US&amp;ver=6.2.2"
+    id="google-map-api-js"
+  ></script>
+  <script type="text/javascript" id="inspiry-search-js-extra">
+    /* <![CDATA[ */
+    var localizedSearchParams = {rent_slug: 'for-rent'};
+    var frontEndAjaxUrl = {
+      sfoiajaxurl: 'https:\/\/modern.realhomes.io\/wp-admin\/admin-ajax.php',
+    };
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/assets/modern/scripts/js/inspiry-search-form0235.js?ver=4.1.1"
+    id="inspiry-search-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../www.google.com/recaptcha/api3903.js?render=6LeOcdcUAAAAAIJAhrwkdJ0j_jV-LiUNayq4pScm&amp;onload=loadInspiryReCAPTCHA&amp;ver=4.1.1"
+    id="inspiry-google-recaptcha-js"
+  ></script>
+  <script type="text/javascript" id="custom-js-extra">
+    /* <![CDATA[ */
+    var localizeSelect = {select_noResult: 'No Results Found!'};
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/assets/modern/scripts/js/custom0235.js?ver=4.1.1"
+    id="custom-js"
+  ></script>
+  <script type="text/javascript" id="ajax-search-js-extra">
+    /* <![CDATA[ */
+    var localized = {additionalFields: [], mapService: 'googlemaps'};
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/assets/modern/scripts/js/ajax-search0235.js?ver=4.1.1"
+    id="ajax-search-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-includes/js/jquery/ui/core.min3f14.js?ver=1.13.2"
+    id="jquery-ui-core-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-includes/js/jquery/ui/tooltip.min3f14.js?ver=1.13.2"
+    id="jquery-ui-tooltip-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/common/js/inspiry-login0235.js?ver=4.1.1"
+    id="inspiry-login-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-includes/js/comment-reply.min3781.js?ver=6.2.2"
+    id="comment-reply-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/common/js/compare-properties0235.js?ver=4.1.1"
+    id="compare-js-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/common/optimize/vendors0235.js?ver=4.1.1"
+    id="vendors-js-js"
+  ></script>
+  <script type="text/javascript" id="realhomes-locations-js-extra">
+    /* <![CDATA[ */
+    var realhomesLocationsData = {
+      any_text: 'Any',
+      any_value: 'any',
+      select_names: [
+        'location',
+        'child-location',
+        'grandchild-location',
+        'great-grandchild-location',
+      ],
+      select_count: '1',
+      locations_in_params: [],
+      multi_select_locations: 'yes',
+      all_locations: [
+        {
+          term_id: 36,
+          name: 'Miami',
+          slug: 'miami',
+          parent: 0,
+          count: 8,
+          children: [
+            {
+              term_id: 48,
+              name: 'Doral',
+              slug: 'doral',
+              parent: 36,
+              count: 1,
+              children: [],
+            },
+            {
+              term_id: 49,
+              name: 'Little Havana',
+              slug: 'little-havana',
+              parent: 36,
+              count: 3,
+              children: [],
+            },
+            {
+              term_id: 39,
+              name: 'Perrine',
+              slug: 'perrine',
+              parent: 36,
+              count: 1,
+              children: [],
+            },
+          ],
+        },
+      ],
+    };
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/common/js/locations0235.js?ver=4.1.1"
+    id="realhomes-locations-js"
+  ></script>
+  <script type="text/javascript" id="common-custom-js-extra">
+    /* <![CDATA[ */
+    var localizeSelect = {
+      select_noResult: 'No Results Found!',
+      ajax_url: 'https:\/\/modern.realhomes.io\/wp-admin\/admin-ajax.php',
+      page_template: 'templates\/home.php',
+      searching_string: 'Searching...',
+      loadingMore: 'Loading more results...',
+    };
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/common/js/common-custom0235.js?ver=4.1.1"
+    id="common-custom-js"
+  ></script>
+  <script type="text/javascript" id="inspiry-cfos-js-js-extra">
+    /* <![CDATA[ */
+    var inspiryUtilsPath = {
+      stylesheet_directory:
+        'https:\/\/modern.realhomes.io\/wp-content\/themes\/realhomes\/common\/js\/utils.js',
+    };
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/common/js/cfos0235.js?ver=4.1.1"
+    id="inspiry-cfos-js-js"
+  ></script>
+  <script type="text/javascript" id="inspiry-cfos-js-js-after">
+    rhRunIntlTelInput('#cfos-number');
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-includes/js/jquery/ui/mouse.min3f14.js?ver=1.13.2"
+    id="jquery-ui-mouse-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-includes/js/jquery/ui/slider.min3f14.js?ver=1.13.2"
+    id="jquery-ui-slider-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/realhomes-elementor-addon/elementor/js/jquery.ui.touch-punch.mine1fc.js?ver=2.1.1"
+    id="jquery-ui-touch-punch-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.mineda1.js?ver=4.1.4"
+    id="flatpickr-js"
+  ></script>
+  <script type="text/javascript" id="lightbox-google-map-js-extra">
+    /* <![CDATA[ */
+    var propertyMapData = {
+      icon: 'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/single-family-home.png',
+      retinaIcon:
+        'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/single-family-home@2x.png',
+      marker_type: 'pin',
+      marker_color: '#ea723d',
+      styles: '',
+      type: 'roadmap',
+    };
+    var propertyMapData = {
+      icon: 'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/villa.png',
+      retinaIcon:
+        'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/villa@2x.png',
+      marker_type: 'pin',
+      marker_color: '#ea723d',
+      styles: '',
+      type: 'roadmap',
+    };
+    var propertyMapData = {
+      icon: 'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/villa.png',
+      retinaIcon:
+        'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/villa@2x.png',
+      marker_type: 'pin',
+      marker_color: '#ea723d',
+      styles: '',
+      type: 'roadmap',
+    };
+    var propertyMapData = {
+      icon: 'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/single-family-home.png',
+      retinaIcon:
+        'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/single-family-home@2x.png',
+      marker_type: 'pin',
+      marker_color: '#ea723d',
+      styles: '',
+      type: 'roadmap',
+    };
+    var propertyMapData = {
+      icon: 'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/villa.png',
+      retinaIcon:
+        'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/villa@2x.png',
+      marker_type: 'pin',
+      marker_color: '#ea723d',
+      styles: '',
+      type: 'roadmap',
+    };
+    var propertyMapData = {
+      icon: 'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/villa.png',
+      retinaIcon:
+        'https:\/\/modern.realhomes.io\/wp-content\/uploads\/2021\/02\/villa@2x.png',
+      marker_type: 'pin',
+      marker_color: '#ea723d',
+      styles: '',
+      type: 'roadmap',
+    };
+    /* ]]> */
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/themes/realhomes/common/js/lightbox-google-map0235.js?ver=4.1.1"
+    id="lightbox-google-map-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/js/webpack.runtime.mina44d.js?ver=3.13.4"
+    id="elementor-webpack-runtime-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/js/frontend-modules.mina44d.js?ver=3.13.4"
+    id="elementor-frontend-modules-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2"
+    id="elementor-waypoints-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/lib/swiper/swiper.min48f5.js?ver=5.3.6"
+    id="swiper-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/lib/share-link/share-link.mina44d.js?ver=3.13.4"
+    id="share-link-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/lib/dialog/dialog.mind227.js?ver=4.9.0"
+    id="elementor-dialog-js"
+  ></script>
+  <script type="text/javascript" id="elementor-frontend-js-before">
+    var elementorFrontendConfig = {
+      environmentMode: {edit: false, wpPreview: false, isScriptDebug: false},
+      i18n: {
+        shareOnFacebook: 'Share on Facebook',
+        shareOnTwitter: 'Share on Twitter',
+        pinIt: 'Pin it',
+        download: 'Download',
+        downloadImage: 'Download image',
+        fullscreen: 'Fullscreen',
+        zoom: 'Zoom',
+        share: 'Share',
+        playVideo: 'Play Video',
+        previous: 'Previous',
+        next: 'Next',
+        close: 'Close',
+      },
+      is_rtl: false,
+      breakpoints: {xs: 0, sm: 480, md: 768, lg: 1025, xl: 1440, xxl: 1600},
+      responsive: {
+        breakpoints: {
+          mobile: {
+            label: 'Mobile Portrait',
+            value: 767,
+            default_value: 767,
+            direction: 'max',
+            is_enabled: true,
+          },
+          mobile_extra: {
+            label: 'Mobile Landscape',
+            value: 880,
+            default_value: 880,
+            direction: 'max',
+            is_enabled: false,
+          },
+          tablet: {
+            label: 'Tablet Portrait',
+            value: 1024,
+            default_value: 1024,
+            direction: 'max',
+            is_enabled: true,
+          },
+          tablet_extra: {
+            label: 'Tablet Landscape',
+            value: 1200,
+            default_value: 1200,
+            direction: 'max',
+            is_enabled: false,
+          },
+          laptop: {
+            label: 'Laptop',
+            value: 1366,
+            default_value: 1366,
+            direction: 'max',
+            is_enabled: false,
+          },
+          widescreen: {
+            label: 'Widescreen',
+            value: 2400,
+            default_value: 2400,
+            direction: 'min',
+            is_enabled: false,
+          },
+        },
+      },
+      version: '3.13.4',
+      is_static: false,
+      experimentalFeatures: {
+        a11y_improvements: true,
+        additional_custom_breakpoints: true,
+        'landing-pages': true,
+      },
+      urls: {
+        assets:
+          'https:\/\/modern.realhomes.io\/wp-content\/plugins\/elementor\/assets\/',
+      },
+      swiperClass: 'swiper-container',
+      settings: {page: [], editorPreferences: []},
+      kit: {
+        active_breakpoints: ['viewport_mobile', 'viewport_tablet'],
+        global_image_lightbox: 'yes',
+        lightbox_enable_counter: 'yes',
+        lightbox_enable_fullscreen: 'yes',
+        lightbox_enable_zoom: 'yes',
+        lightbox_enable_share: 'yes',
+        lightbox_title_src: 'title',
+        lightbox_description_src: 'description',
+      },
+      post: {
+        id: 7072,
+        title: 'Home%20-%20RealHomes%20Modern',
+        excerpt: '',
+        featuredImage: false,
+      },
+    };
+  </script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/js/frontend.mina44d.js?ver=3.13.4"
+    id="elementor-frontend-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/realhomes-elementor-addon/elementor/js/featured-propertiese1fc.js?ver=2.1.1"
+    id="rhea-featured-properties-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/realhomes-elementor-addon/elementor/js/news-widgete1fc.js?ver=2.1.1"
+    id="rhea-news-widget-js"
+  ></script>
+  <script
+    type="text/javascript"
+    defer
+    src="../frontend/wp-content/plugins/mailchimp-for-wp/assets/js/forms55fe.js?ver=4.9.5"
+    id="mc4wp-forms-api-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/realhomes-elementor-addon/elementor/js/frontende1fc.js?ver=2.1.1"
+    id="ere-elementor-frontend-js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../frontend/wp-content/plugins/elementor/assets/js/preloaded-modules.mina44d.js?ver=3.13.4"
+    id="preloaded-modules-js"
+  ></script>
+  <script>
+    (function (a, b, c) {
+      var d = a.history,
+        e = document,
+        f = navigator || {},
+        g = localStorage,
+        h = encodeURIComponent,
+        i = d.pushState,
+        k = function () {
+          return Math.random().toString(36);
+        },
+        l = function () {
+          return g.cid || (g.cid = k()), g.cid;
+        },
+        m = function (r) {
+          var s = [];
+          for (var t in r)
+            r.hasOwnProperty(t) &&
+              void 0 !== r[t] &&
+              s.push(h(t) + '=' + h(r[t]));
+          return s.join('&');
+        },
+        n = function (r, s, t, u, v, w, x) {
+          var z = 'https://www.google-analytics.com/collect',
+            A = m({
+              v: '1',
+              ds: 'web',
+              aip: c.anonymizeIp ? 1 : void 0,
+              tid: b,
+              cid: l(),
+              t: r || 'pageview',
+              sd:
+                c.colorDepth && screen.colorDepth
+                  ? screen.colorDepth + '-bits'
+                  : void 0,
+              dr: e.referrer || void 0,
+              dt: e.title,
+              dl: e.location.origin + e.location.pathname + e.location.search,
+              ul: c.language ? (f.language || '').toLowerCase() : void 0,
+              de: c.characterSet ? e.characterSet : void 0,
+              sr: c.screenSize
+                ? (a.screen || {}).width + 'x' + (a.screen || {}).height
+                : void 0,
+              vp:
+                c.screenSize && a.visualViewport
+                  ? (a.visualViewport || {}).width +
+                    'x' +
+                    (a.visualViewport || {}).height
+                  : void 0,
+              ec: s || void 0,
+              ea: t || void 0,
+              el: u || void 0,
+              ev: v || void 0,
+              exd: w || void 0,
+              exf: 'undefined' != typeof x && !1 == !!x ? 0 : void 0,
+            });
+          if (f.sendBeacon) f.sendBeacon(z, A);
+          else {
+            var y = new XMLHttpRequest();
+            y.open('POST.html', z, !0), y.send(A);
+          }
+        };
+      (d.pushState = function (r) {
+        return (
+          'function' == typeof d.onpushstate && d.onpushstate({state: r}),
+          setTimeout(n, c.delay || 10),
+          i.apply(d, arguments)
+        );
+      }),
+        n(),
+        (a.ma = {
+          trackEvent: function o(r, s, t, u) {
+            return n('event', r, s, t, u);
+          },
+          trackException: function q(r, s) {
+            return n('exception', null, null, null, null, r, s);
+          },
+        });
+    })(window, 'UA-31893023-21', {
+      anonymizeIp: !0,
+      colorDepth: !0,
+      characterSet: !0,
+      screenSize: !0,
+      language: !0,
+    });
+  </script>
+</body>
+
+<!-- Mirrored from modern.realhomes.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jul 2023 11:20:58 GMT -->
+</html>

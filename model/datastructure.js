@@ -47,3 +47,13 @@ var vehicle = new Schema({
 var Vehicle =
     mongoose.model('Vehicle', vehicle);
 module.exports = Vehicle;
+
+var user = new Schema({
+    username:String,
+    password:String,
+    supscriptions:String,
+});
+
+var User =
+    mongoose.model('User', user);
+module.exports = User;

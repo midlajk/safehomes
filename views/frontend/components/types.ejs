@@ -1,0 +1,118 @@
+<div class="rh_gallery" id="rh_gallery_scrolling"  style="margin-top: 50px;">
+    <div class="rh_gallery__wrap isotope">
+       
+        <%- include('./subcomponent/imageclick.ejs',{image:'/frontend/wp-content/uploads/2017/06/exterior-05-680x510.jpg',button:'Beach Side',link:'#'}) -%>
+        <%- include('./subcomponent/imageclick.ejs',{image:'/frontend/wp-content/uploads/2017/06/exterior-04-680x510.jpg',button:'Eco Friendly',link:'#'}) -%>
+    
+        <%- include('./subcomponent/imageclick.ejs',{image:'/frontend/wp-content/uploads/2020/06/bunglow-01-680x510.jpg',button:'Living Area',link:'#'}) -%>
+
+        <%- include('./subcomponent/imageclick.ejs',{image:'/frontend/wp-content/uploads/2021/04/apartment-08-680x510.jpg',button:'Off Plan',link:'#'}) -%>
+
+        <%- include('./subcomponent/imageclick.ejs',{image:'/frontend/wp-content/uploads/2020/06/apartment-05-680x510.jpg',button:'Luxury Apartment',link:'#'}) -%>
+        <%- include('./subcomponent/imageclick.ejs',{image:'/frontend/wp-content/uploads/2017/06/exterior-01-680x510.jpg',button:'Sapcious Apartment',link:'#'}) -%>
+
+
+
+      
+
+    
+
+
+    </div>
+    <!-- /.rh_gallery__wrap isotope -->
+  </div>
+
+<script>
+  // Function to animate the sliding of gallery items from top to bottom
+  function animateTopToBottom(item, itemIndex) {
+    const animationDuration = 1000; // 1 second
+    const animationDelay = 200; // 0.2 seconds between each item's animation
+    const itemHeight = item.offsetHeight;
+    const animationStart = performance.now();
+
+    function animateSlide(timestamp) {
+      const progress = timestamp ? (timestamp - animationStart) / animationDuration : 0;
+      const displacementY = progress * itemHeight;
+
+      item.style.transform = `translateY(${displacementY}px)`;
+
+      if (progress < 1) {
+        requestAnimationFrame(animateSlide);
+      } else {
+        // Reset the transformation to its original position
+        item.style.transform = 'translateY(0)';
+      }
+    }
+
+    // Add delay for each item's animation
+    setTimeout(() => {
+      requestAnimationFrame(animateSlide);
+    }, itemIndex * animationDelay);
+  }
+
+  // Function to animate the sliding of gallery items from bottom to top
+  function animateBottomToTop(item, itemIndex) {
+    const animationDuration = 1000; // 1 second
+    const animationDelay = 200; // 0.2 seconds between each item's animation
+    const itemHeight = item.offsetHeight;
+    const animationStart = performance.now();
+
+    function animateSlide(timestamp) {
+      const progress = timestamp ? (timestamp - animationStart) / animationDuration : 0;
+      const displacementY = -progress * itemHeight;
+
+      item.style.transform = `translateY(${displacementY}px)`;
+
+      if (progress < 1) {
+        requestAnimationFrame(animateSlide);
+      } else {
+        // Reset the transformation to its original position
+        item.style.transform = 'translateY(0)';
+      }
+    }
+
+    // Add delay for each item's animation
+    setTimeout(() => {
+      requestAnimationFrame(animateSlide);
+    }, (itemIndex - 3) * animationDelay);
+  }
+
+  // Intersection Observer callback function
+  function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Remove the observer as we only want the animation to happen once
+        observer.unobserve(entry.target);
+
+        const galleryItems = document.querySelectorAll('.rh_gallery__item');
+
+        // Trigger the sliding animation for the first three items from top to bottom
+        for (let i = 0; i < 3; i++) {
+          animateTopToBottom(galleryItems[i], i);
+        }
+
+        // Trigger the sliding animation for the other three items from bottom to top
+        for (let i = 3; i < 6; i++) {
+          animateBottomToTop(galleryItems[i], i);
+        }
+      }
+    });
+  }
+
+  // Create an Intersection Observer to detect when the gallery section comes into view
+  const gallerySection = document.getElementById('rh_gallery_scrolling');
+  const observerOptions = {
+    root: null,
+    threshold: 0.5 // Trigger the callback when at least 50% of the gallery section is visible
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+  // Observe the gallery section when the DOM content is fully loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    if (gallerySection) {
+      observer.observe(gallerySection);
+    }
+  });
+</script>
+

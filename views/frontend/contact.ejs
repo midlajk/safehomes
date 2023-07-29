@@ -1,0 +1,69 @@
+<%- include('./includes/head.ejs') -%>
+<%- include('./includes/menu.ejs') -%>
+
+      <!-- Slider -->
+      <%- include('./components/banner.ejs',{screenname:'Contact Us'}) -%>
+
+      <!-- End Slider -->
+
+      <!-- /.rh_prop_search -->
+      <div class="wrapper-home-sections" style="margin-top: 30px;">
+        <section
+        id="properties-listing"
+        class="rh_section rh_section--flex rh_wrap--padding rh_wrap--topPadding"
+        data-properties-count="6"
+      >
+     
+        <!-- /.rh_page rh_page__sidebar -->
+      </section>
+      </div>
+      
+      <%- include('./components/footer.ejs') -%>
+
+    </div>
+    <a href="#top" id="scroll-top" class="stp_right"
+      ><i class="fas fa-chevron-up"></i
+    ></a>
+    <div class="rh_wrapper_floating_features">
+       
+        <div class="rh_wrapper_properties_compare">
+          <div class="rh_floating_compare_button">
+            <span class="rh_compare_icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
+                  transform="translate(-1121 -1922)"
+                />
+              </svg>
+            </span>
+            <span class="rh_compare_count"></span>
+          </div>
+          <div class="rh_fixed_side_bar_compare">
+            <section class="rh_compare rh_compare__section">
+              <h4 class="title">Compare Properties</h4>
+              <div class="rh_compare__carousel"></div>
+              <a
+                href="../compare-properties/index.html"
+                class="rh_compare__submit rh_btn rh_btn--primary"
+                >Compare</a
+              >
+            </section>
+          </div>
+        </div>
+      </div>
+    <div
+      id="rh_compare_action_notification"
+      class="rh_compare_action_notification"
+    >
+      <span
+        >You can only compare 4 properties, any new property added will replace
+        the first one from the comparison.</span
+      >
+    </div>
+   
+    <%- include('./includes/end.ejs') -%>

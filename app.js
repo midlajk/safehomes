@@ -4,11 +4,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const session = require('express-session');
+const store = require('./model/db')
 // view engine setu
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var postrequest = require('./routes/postrequest');
+var getrequest = require('./routes/getrequest');
+/////front end //
+var frontendrequest = require('./routes/frontend/index');
+
 var cors = require('cors')
 const corsOptions ={
   origin:'http://localhost:3000', 
@@ -16,21 +21,32 @@ const corsOptions ={
   optionSuccessStatus:200
 }
 var app = express();
+app.use(
+  session({
+      secret: 'my secret',
+      resave: false,
+      saveUninitialized: false,
+      store: store,
+  
 
+  })
+);
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('views', 'views');
 app.use(cors())
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/', postrequest);
+app.use('/backend/', indexRouter);
+app.use('/backend/', postrequest);
+app.use('/backend/', getrequest);
 app.use('/users', usersRouter);
+/////Front end routes ///
+app.use('/', frontendrequest);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

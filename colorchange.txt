@@ -1,0 +1,4 @@
+footer 303030 - > 38344b
+--rh-global-color-primary ->1ea69a -> d3b97d\
+
+ --rh-global-color-secondary ea723d -> #eab03d

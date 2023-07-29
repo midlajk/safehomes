@@ -1,0 +1,67 @@
+<%- include('./include/dashboardhead.ejs') -%>
+
+    <div class="content-wrapper">
+        <!-- Content -->
+
+        <div class="container-xxl flex-grow-1 container-p-y">
+
+
+            <!-- Basic Bootstrap Table -->
+            <div class="card">
+              <div class="card-body">
+                  <!-- Logo -->
+                 
+                  <!-- /Logo -->
+                  <h4 class="mb-2">Update Login Credintials!</h4>
+                  <p class="mb-4">Please note down the Credintials</p>
+<div style="display: flex;flex-direction: row;justify-content: center;">
+                  <form id="formAuthentication" action="/login" class="mb-3 col-4 col-md-5 col-sm-12 col-lg-5" method="POST">
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Username</label>
+                          <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus />
+                      </div>
+                      <div class="mb-3 form-password-toggle">
+                          <div class="d-flex justify-content-between">
+                              <label class="form-label" for="password">Password</label>
+                              
+                          </div>
+                          <div class="input-group input-group-merge">
+                              <input type="text" id="text" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                             
+                          </div>
+                      </div>
+                      
+                      <div class="mb-3">
+                          <button class="btn btn-primary d-grid w-100" form="formAuthentication" type="submit">Update Admin Login</button>
+                      </div>
+                  </form>
+
+                </div>
+              </div>
+          </div></div>
+<!--/ Basic Bootstrap Table -->
+
+</div>
+<!-- / Content -->
+
+<!-- Footer -->
+
+<!-- / Footer -->
+
+<div class="content-backdrop fade"></div>
+</div>
+<!-- Content wrapper -->
+</div>
+<!-- / Layout page -->
+</div>
+
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
+</div>
+<!-- / Layout wrapper -->
+
+
+
+
+                                    
+                                        <%- include('./include/end.ejs') -%>
